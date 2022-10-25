@@ -16,10 +16,10 @@ public class CustomLinkedList<R> {
 			this.last = node;
 		} else {
 			this.last.setNext(node);
+			node.setPrev(this.last);
 			this.last = node;
 		}
 		node.setValue(value);
-		node.setPrev(this.last);
 		node.setNext(node);
 		this.size++;
 	}
